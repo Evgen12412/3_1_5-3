@@ -3,7 +3,7 @@ const dbRoles = [{id: 1, name: "ROLE_ADMIN"}, {id: 2, name: "ROLE_USER"}]
 
 
 
-fetch('api/user/')
+fetch('/user')
     .then(response => response.json())
     .catch(error => console.log(error))
 
@@ -61,7 +61,7 @@ const showUser = (user) => {
         </tr>`
     container.innerHTML = userInfo
 }
-fetch('api/user/')
+fetch('/user')
     .then(response => response.json())
     .then(data => {
         showUser(data)
@@ -264,3 +264,4 @@ const detailsUser = (user) => {
     `
     containerNavbar.innerHTML = userNavbar
 }
+
