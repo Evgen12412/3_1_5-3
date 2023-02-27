@@ -12,7 +12,6 @@ import ru.kata.spring.boot_security.demo.service.user.UserServiceInterface;
 import java.security.Principal;
 
 @RestController
-@CrossOrigin
 @RequestMapping("/user")
 public class UserPageRestController {
       private final UserServiceInterface userService;
