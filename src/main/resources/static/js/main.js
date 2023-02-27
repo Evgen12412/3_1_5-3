@@ -255,7 +255,7 @@ const detailsUser = (user) => {
     userNavbar += `
          <span class="navbar-brand mb-0 h1" style="color:white; margin-right: 20px">${user.username}</span>
          <span class="navbar-brand mb-0 h1" style="color:white">${user.roles.map(role => role.name)}</span>
-         <a href="/logout">
+         <a href="/login">
          <button type="button" class="btn btn-primary mr float-right" style="margin-left: 800px">
          Выйти
          </button>

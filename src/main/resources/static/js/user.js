@@ -1,4 +1,6 @@
-fetch("/api/user/")
+const urlUser = "http://localhost:34444/user";
+
+fetch(urlUser)
     .then(response => response.json())
     .catch(error => console.log(error))
 
@@ -23,7 +25,7 @@ const detailsUser = (user) => {
     userNavbar += `
          <span class="navbar-brand mb-0 h1" style="color:white; margin-right: 20px">${user.username}</span>
          <span class="navbar-brand mb-0 h1" style="color:white">${user.roles.map(role => role.name)}</span>
-         <a href="/logout">
+         <a href="/login">
          <button type="button" class="btn btn-primary mr float-right" style="margin-left: 800px">
          Выйти
          </button>
@@ -33,10 +35,11 @@ const detailsUser = (user) => {
     containerNavbar.innerHTML = userNavbar
 }
 
-fetch("/api/user/")
+fetch(urlUser)
     .then(response => response.json())
     .then(data => {
         showUserInfo(data);
         detailsUser(data)
     })
     .catch(error => console.log(error))
+

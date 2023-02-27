@@ -41,10 +41,6 @@ public class AdminRestController {
         return new ResponseEntity<>(userService.findUserById(id), HttpStatus.OK);
     }
 
-    @GetMapping("/principal")
-    public Optional<User> getUser(Principal principal) {
-        return userService.findByUserName(principal.getName());
-    }
 
     @PostMapping
     public ResponseEntity<HttpStatus> newUser(@RequestBody User user) {
